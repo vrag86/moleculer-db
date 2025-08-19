@@ -514,7 +514,7 @@ module.exports = {
 		 * @returns {Promise}
 		 */
 		clearCache() {
-			if (this.settings.cacheEnabled) {
+			if (this.broker[this.settings.cacheCleanEventType]) {
 				this.broker[this.settings.cacheCleanEventType](`cache.clean.${this.fullName}`);
 				if (this.broker.cacher)
 					return this.broker.cacher.clean(`${this.fullName}.**`);
