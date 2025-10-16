@@ -58,7 +58,8 @@ describe("Test DbService actions", () => {
 			pageSize: 10,
 			populates: null,
 			useDotNotation: false,
-			cacheCleanEventType: "broadcast"
+			cacheCleanEventType: "broadcast",
+			cacheEnabled: true
 		});
 	});
 
